@@ -13,7 +13,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const { replace } = useRouter();
   const handleSearch = useDebouncedCallback((term) => {
     const params = new URLSearchParams(searchParams);
-    params.set('page', '1');
+    params.set('page', '1'); //當使用者鍵入新的搜尋查詢時，將頁碼重設為 1。
     if (term) {
       params.set('query', term);
     } else {
