@@ -1,10 +1,11 @@
 import { CheckIcon, ClockIcon } from '@heroicons/react/24/outline';
-import clsx from 'clsx';
+import clsx from 'clsx'; // 用來切換類名的庫
 
 export default function InvoiceStatus({ status }: { status: string }) {
   return (
     <span
       className={clsx(
+        // 依條件切換類別名
         'inline-flex items-center rounded-full px-2 py-1 text-xs',
         {
           'bg-gray-100 text-gray-500': status === 'pending',
